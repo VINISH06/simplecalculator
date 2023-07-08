@@ -23,18 +23,22 @@ public class Calculator implements ActionListener{
 		
 		frame=new JFrame("Calculator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
 		frame.setSize(420,550);
 		frame.setLayout(null);
 		Color color=new Color(69,69,69);
 		frame.getContentPane().setBackground(color);
-	
+	    ImageIcon image=new ImageIcon("/Calculator/src/logo.png");
+	     frame.setIconImage(image.getImage());
+			
+		
+		
 		textfield = new JTextField();
 		textfield.setBounds(50, 25, 300, 50);
 		textfield.setFont(myFont);
 		textfield.setEditable(false);
 		textfield.setBackground(Color.cyan);
-		
-		
+
 		
 		
 		addButton=new JButton("+");
