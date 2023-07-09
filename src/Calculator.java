@@ -26,18 +26,18 @@ public class Calculator implements ActionListener{
 		frame.setResizable(false);
 		frame.setSize(420,550);
 		frame.setLayout(null);
-		Color color=new Color(69,69,69);
+		Color color=new Color(64,18,139);
+		Color color1=new Color(248,111,3);
 		frame.getContentPane().setBackground(color);
-	    ImageIcon image=new ImageIcon("/Calculator/src/logo.png");
-	     frame.setIconImage(image.getImage());
-			
-		
-		
+	    ImageIcon image=new ImageIcon("logo.png");
+	    frame.setIconImage(image.getImage());
+	 		
 		textfield = new JTextField();
 		textfield.setBounds(50, 25, 300, 50);
 		textfield.setFont(myFont);
 		textfield.setEditable(false);
-		textfield.setBackground(Color.cyan);
+		textfield.setBackground(Color.white);
+	
 
 		
 		
@@ -67,8 +67,9 @@ public class Calculator implements ActionListener{
 			functionButtons[i].addActionListener(this);
 			functionButtons[i].setFont(myFont);
 			functionButtons[i].setFocusable(false);
+	functionButtons[i].setBackground(color1)		;
 	
-		
+	functionButtons[i].setForeground(Color.black);
 		}
 		
 		for(int i=0;i<10;i++) {
@@ -76,8 +77,7 @@ public class Calculator implements ActionListener{
 			numberButtons[i].addActionListener(this);
 			numberButtons[i].setFont(myFont);
 			numberButtons[i].setFocusable(false);
-	
-		}
+	numberButtons[i].setBackground(Color.white);	}
 		
 		negButton.setBounds(50,430,100,50);
 		delButton.setBounds(150,430,100,50);
